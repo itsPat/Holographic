@@ -13,6 +13,11 @@
 		18B24B5E28428CE2007D7C2F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18B24B5C28428CE2007D7C2F /* Main.storyboard */; };
 		18B24B6028428CE4007D7C2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18B24B5F28428CE4007D7C2F /* Assets.xcassets */; };
 		18B24B6328428CE4007D7C2F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18B24B6128428CE4007D7C2F /* LaunchScreen.storyboard */; };
+		18B24B6B28428CF5007D7C2F /* HolographicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B24B6A28428CF5007D7C2F /* HolographicView.swift */; };
+		18B24B6D28428D0B007D7C2F /* SceneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B24B6C28428D0B007D7C2F /* SceneView.swift */; };
+		18B24B6F28428D22007D7C2F /* GyroManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B24B6E28428D22007D7C2F /* GyroManager.swift */; };
+		18B24B7128428D54007D7C2F /* GradientLayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B24B7028428D54007D7C2F /* GradientLayerView.swift */; };
+		18B24B7328428D64007D7C2F /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B24B7228428D64007D7C2F /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,11 @@
 		18B24B5F28428CE4007D7C2F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18B24B6228428CE4007D7C2F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		18B24B6428428CE4007D7C2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18B24B6A28428CF5007D7C2F /* HolographicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolographicView.swift; sourceTree = "<group>"; };
+		18B24B6C28428D0B007D7C2F /* SceneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneView.swift; sourceTree = "<group>"; };
+		18B24B6E28428D22007D7C2F /* GyroManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GyroManager.swift; sourceTree = "<group>"; };
+		18B24B7028428D54007D7C2F /* GradientLayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientLayerView.swift; sourceTree = "<group>"; };
+		18B24B7228428D64007D7C2F /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +66,7 @@
 		18B24B5528428CE2007D7C2F /* Holographic */ = {
 			isa = PBXGroup;
 			children = (
+				18B24B7528428D73007D7C2F /* Holographic */,
 				18B24B5628428CE2007D7C2F /* AppDelegate.swift */,
 				18B24B5828428CE2007D7C2F /* SceneDelegate.swift */,
 				18B24B5A28428CE2007D7C2F /* ViewController.swift */,
@@ -65,6 +76,18 @@
 				18B24B6428428CE4007D7C2F /* Info.plist */,
 			);
 			path = Holographic;
+			sourceTree = "<group>";
+		};
+		18B24B7528428D73007D7C2F /* Holographic */ = {
+			isa = PBXGroup;
+			children = (
+				18B24B6A28428CF5007D7C2F /* HolographicView.swift */,
+				18B24B6C28428D0B007D7C2F /* SceneView.swift */,
+				18B24B6E28428D22007D7C2F /* GyroManager.swift */,
+				18B24B7028428D54007D7C2F /* GradientLayerView.swift */,
+				18B24B7228428D64007D7C2F /* Extensions.swift */,
+			);
+			name = Holographic;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,8 +162,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				18B24B5B28428CE2007D7C2F /* ViewController.swift in Sources */,
+				18B24B7128428D54007D7C2F /* GradientLayerView.swift in Sources */,
+				18B24B6D28428D0B007D7C2F /* SceneView.swift in Sources */,
+				18B24B7328428D64007D7C2F /* Extensions.swift in Sources */,
 				18B24B5728428CE2007D7C2F /* AppDelegate.swift in Sources */,
 				18B24B5928428CE2007D7C2F /* SceneDelegate.swift in Sources */,
+				18B24B6F28428D22007D7C2F /* GyroManager.swift in Sources */,
+				18B24B6B28428CF5007D7C2F /* HolographicView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
