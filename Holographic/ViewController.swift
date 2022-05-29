@@ -27,7 +27,7 @@ class ViewController: UIViewController {
     }
     
     func setupViews() {
-        container.backgroundColor = .label.withAlphaComponent(0.05)
+        container.backgroundColor = .label.withAlphaComponent(0.125)
         container.layer.cornerCurve = .continuous
         container.layer.cornerRadius = 20.0
         container.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner, .layerMinXMaxYCorner, .layerMaxXMaxYCorner]

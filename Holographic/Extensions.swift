@@ -41,10 +41,14 @@ extension UIView {
         identity.m34 = -1 / 500.0
         layer.transform = identity
         
-        let effect = UIInterpolatingMotionEffect(keyPath: "layer.transform", type: .tiltAlongVerticalAxis)
-        effect.minimumRelativeValue = CATransform3DRotate(identity, ((360.0 - maxRotationDegrees) * .pi) / (180.0 * (inverted ? -1.0 : 1.0)), 1.0, 0.0, 0.0)
-        effect.maximumRelativeValue = CATransform3DRotate(identity, (maxRotationDegrees * .pi) / (180.0 * (inverted ? -1.0 : 1.0)), 1.0, 0.0, 0.0)
+        let horizontalEffect = UIInterpolatingMotionEffect(keyPath: "layer.transform", type: .tiltAlongHorizontalAxis)
+        horizontalEffect.minimumRelativeValue = CATransform3DRotate(layer.transform, ((360.0 - maxRotationDegrees) * .pi) / (180.0 * (inverted ? 1.0 : -1.0)), 0.0, 1.0, 0.0)
+        horizontalEffect.maximumRelativeValue = CATransform3DRotate(layer.transform, (maxRotationDegrees * .pi) / (180.0 * (inverted ? 1.0 : -1.0)), 0.0, 1.0, 0.0)
         
-        addMotionEffect(effect)
+        let verticalEffect = UIInterpolatingMotionEffect(keyPath: "layer.transform", type: .tiltAlongVerticalAxis)
+        verticalEffect.minimumRelativeValue = CATransform3DRotate(layer.transform, ((360.0 - maxRotationDegrees) * .pi) / (180.0 * (inverted ? -1.0 : 1.0)), 1.0, 0.0, 0.0)
+        verticalEffect.maximumRelativeValue = CATransform3DRotate(layer.transform, (maxRotationDegrees * .pi) / (180.0 * (inverted ? -1.0 : 1.0)), 1.0, 0.0, 0.0)
+        
+        motionEffects = [horizontalEffect, verticalEffect]
     }
 }
